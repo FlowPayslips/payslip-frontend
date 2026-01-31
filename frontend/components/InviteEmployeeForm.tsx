@@ -21,7 +21,7 @@ export default function InviteEmployeeForm() {
   });
 
   return (
-    <div className="border rounded p-4 bg-gray-900 space-y-3">
+    <div className="border rounded p-4 bg-gray-1000 space-y-3">
       <h2 className="font-medium">Invite employee</h2>
 
       <input
@@ -63,7 +63,7 @@ export default function InviteEmployeeForm() {
       <button
         onClick={() => inviteMutation.mutate({ email, employee_id, joined_at: joinedAt })}
         disabled={!email || !employee_id || inviteMutation.isPending}
-        className="bg-black text-white px-4 py-2 rounded disabled:opacity-50"
+        className="bg-gray-700 text-white px-4 py-2 rounded disabled:opacity-50"
       >
         Send invite
       </button>

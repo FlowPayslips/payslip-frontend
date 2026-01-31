@@ -28,19 +28,19 @@ export default function MembersPage() {
   }
 
   return (
-    <div className="p-6">
-      <h1 className="text-xl font-semibold mb-4">Employees</h1>
-      {isAdmin && (
-        <div className="mb-6">
-            <InviteEmployeeForm />
-        </div>
-        )}
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {data.map((employee: any) => (
-          <EmployeeCard key={employee.id} employee={employee} />
-        ))}
-      </div>
+<div className="p-6 flex gap-6">
+  {isAdmin && (
+    <div className="w-80">
+      <InviteEmployeeForm />
     </div>
+  )}
+
+  <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {data.map((employee: any) => (
+      <EmployeeCard key={employee.id} employee={employee} />
+    ))}
+  </div>
+</div>
+
   );
 }
